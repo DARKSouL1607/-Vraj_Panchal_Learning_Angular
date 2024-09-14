@@ -9,5 +9,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Vraj_Panchal_Learning_Angular';
+  title = 'Vraj_Panchal_Learning_Angular_123123';
+  first_name = 'VRAJ';
+  class_code = 'MAD 307'
 }
