@@ -1,7 +1,7 @@
 export interface User {
- id: 12345;
- firstName: "vraj";
- lastName: "panchal";
+ id: number;
+ firstName: string;
+ lastName: string;
  isAdmin?: boolean;
- SUBJECT : "java script frame WORK";
+ department : string;
 }

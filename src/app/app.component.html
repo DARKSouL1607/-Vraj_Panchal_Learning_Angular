@@ -10,9 +10,19 @@
 <main class="main">
   <div class="content">
     <div class="left-side">
-      <h1>Hello, welcone to the project : {{ title }}</h1>
-      <p>My name is {{first_name}}</p>
-      <p>This is class {{class_code}}</p>
+      <div class="container">
+
+        <div *ngFor="let users of userList">
+
+          {{users.id}}
+          {{users.firstName}}
+          {{users.lastName}}
+          {{users.department}}
+          {{users.isAdmin}}
+
+        </div>
+      </div>
+
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
   </div>
