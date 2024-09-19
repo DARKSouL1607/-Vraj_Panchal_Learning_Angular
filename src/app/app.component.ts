@@ -19,31 +19,31 @@ export class AppComponent {
 
   user1: User = {
     id: 1, firstName: "Matt", lastName: "Haug",
-    department: "Programming", isAdmin: false
+    department: "Engineering", isAdmin: false
   };
   user2: User = {
     id: 2, firstName: "Darren", lastName:
-      "Takakki", department: "Web Dev", isAdmin: true
+      "Takakki", department: "Management", isAdmin: false
   };
   
   user3: User = {
-    id: 2, firstName: "kai", lastName:
-      "filiaut", department: "Web Dev", isAdmin: true
+    id: 3, firstName: "kai", lastName:
+      "filiaut", department: "Sales", isAdmin: false
   };
   
   user4: User = {
-    id: 2, firstName: "kiesten", lastName:
-      "mio", department: "Web Dev", isAdmin: true
+    id: 4, firstName: "kiesten", lastName:
+      "mio", department: "HR", isAdmin: false
   };
   
   user5: User = {
-    id: 2, firstName: "kuantan", lastName:
-      "maa", department: "Web Dev", isAdmin: true
+    id: 5, firstName: "kuantan", lastName:
+      "maa", department: "CTO Office", isAdmin: true
   };
   
   user6: User = {
-    id: 2, firstName: "vraj", lastName:
-      "panchal", department: "Web Dev", isAdmin: false
+    id: 6, firstName: "vraj", lastName:
+      "panchal", department: "PR Team", isAdmin: false
   };
   //Can declare values either way
   userList: User[] = [this.user1, this.user2, this.user3, this.user4, this.user5, this.user6,
