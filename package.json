@@ -1,6 +1,6 @@
 {
   "name": "vraj-panchal-learning-angular",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,6 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:Vraj_Panchal_Learning_Angular": "node dist/vraj-panchal-learning-angular/server/server.mjs"
+   
+
   },
   "private": true,
   "dependencies": {
