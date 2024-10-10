@@ -1,8 +1,7 @@
-
 <div class="content-list">
-    <div class="content-item" *ngFor="let item of contentList">
-      <h2>{{ item.title }}</h2>
-      <p>{{ item.description }}</p>
-    </div>
+    <app-content-list-item
+      *ngFor="let item of contentList"
+      [contentItem]="item">
+    </app-content-list-item>
   </div>
   
