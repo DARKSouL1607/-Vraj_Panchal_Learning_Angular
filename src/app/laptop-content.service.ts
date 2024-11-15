@@ -1,43 +1,45 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { MOCK_CONTENT } from './data/mock-content';
 import { IContent } from './models/Icontent';
-
-
+import { MOCK_CONTENT } from './data/mock-content'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class LaptopContentService {
-  private contents: IContent[] = MOCK_CONTENT;
+
+  private contentList: IContent[] = MOCK_CONTENT;
 
   constructor() {}
-  
+
   getAllContent(): Observable<IContent[]> {
-    return of(this.contents); 
+    return of(this.contentList);
   }
 
-
-  getAll(): IContent[] {
-    return this.contents;
+  getContentById(id: number): Observable<IContent | undefined> {
+    const content = this.contentList.find(item => item.id === id);
+    return of(content);
   }
 
-  getById(id: number): IContent | undefined {
-    return this.contents.find(content => content.id === id);
+  addContent(newContent: IContent): Observable<IContent[]> {
+    this.contentList.push(newContent);
+    return of(this.contentList);
   }
 
-  add(content: IContent): void {
-    this.contents.push(content);
-  }
-
-  update(content: IContent): void {
-    const index = this.contents.findIndex((c: IContent) => c.id === content.id);
-    if (index > -1) {
-      this.contents[index] = content;
+  updateContent(updatedContent: IContent): Observable<IContent[]> {
+    const index = this.contentList.findIndex(item => item.id === updatedContent.id);
+    if (index !== -1) {
+      this.contentList[index] = updatedContent;
     }
+    return of(this.contentList);
   }
 
-  delete(id: number): void {
-    this.contents = this.contents.filter((content: IContent) => content.id !== id);
+  removeContentById(id: number): Observable<IContent | undefined> {
+    const index = this.contentList.findIndex(item => item.id === id);
+    if (index !== -1) {
+      const removedItem = this.contentList.splice(index, 1)[0];
+      return of(removedItem);
+    }
+    return of(undefined);
   }
 }
