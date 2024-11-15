@@ -1,7 +1,9 @@
 <div class="content-list">
     <app-content-list-item
       *ngFor="let item of contentList"
-      [contentItem]="item">
+      [contentItem]="item"
+      (click)="onItemClick(item)"
+      >
     </app-content-list-item>
   </div>
   

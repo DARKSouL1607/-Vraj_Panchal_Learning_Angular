@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ContentListItemComponent {
   @Input() contentItem: { id: number; title: string; description: string } | undefined;
+ 
 }
