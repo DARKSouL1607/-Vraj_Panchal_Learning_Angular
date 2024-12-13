@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>CRICKETER LIST</h2>
+  <div *ngFor="let cricket of crickets" [routerLink]="['/cricket', cricket.playerName]">
+    <p> ID: {{ cricket.id }}</p>
+    <p> playerName: {{ cricket.playerName }}</p>
+    <p> playerPosition: {{ cricket.playerPosition }}</p>
+    <p> playerJerseyNumber: {{ cricket.playerJerseyNumber }}</p>
+    <p> playerAge: {{ cricket.playerAge }}</p>
+    <p> isplayertrophies: {{ cricket.isplayertrophies ? 'Yes' : 'No' }}</p>
+    <button type="button" (click)="deleteCricket(cricket.id)">Delete Cricketer</button>
+    <button type="button" (click)="edit()">Edit</button>
+  </div>
+</div>

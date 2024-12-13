@@ -1,0 +1,9 @@
+<div *ngFor="let cricket of crickets" class="cricket-list-item">
+  <h2>Cricket List</h2>
+  <p>ID: {{ cricket.id }}</p>
+  <p>Player Name: {{ cricket.playerName }}</p>
+  <p>Position: {{ cricket.playerPosition }}</p>
+  <p>Jersey Number: {{ cricket.playerJerseyNumber }}</p>
+  <p>Age: {{ cricket.playerAge }}</p>
+  <p>Player Trophies: {{ cricket.isplayertrophies ? 'Yes' : 'No' }}</p>
+</div>
